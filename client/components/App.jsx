@@ -1,9 +1,28 @@
 import React from 'react'
 
+import ChildOne from './ChildOne'
+import ChildTwo from './ChildTwo'
+
+const subscriptions = []
+
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <div className='app'>
+      <h1>React Component Subscriptions</h1>
+      <div style={{display: 'flex'}}>
+        <ChildOne subscribe={subscribe} trigger={trigger} />
+        <ChildTwo subscribe={subscribe} trigger={trigger} />
+      </div>
+    </div>
   )
+}
+
+function subscribe (fn) {
+  subscriptions.push(fn)
+}
+
+function trigger (msg) {
+  subscriptions.forEach(sub => sub(msg))
 }
 
 export default App
