@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='app'>
       <h1>React Component Subscriptions</h1>
-      <div style={{display: 'flex'}}>
+      <div className='children'>
         <ChildOne subscribe={subscribe} trigger={trigger} />
         <ChildTwo subscribe={subscribe} trigger={trigger} />
       </div>
