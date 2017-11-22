@@ -18,6 +18,7 @@ const App = () => {
 }
 
 function subscribe (fn) {
+  console.log(subscriptions) // test this before you merge it back to Don OK??
   const foundFunc = subscriptions.find(f => f.name === fn.name)
   !foundFunc && subscriptions.push(fn) 
 }
