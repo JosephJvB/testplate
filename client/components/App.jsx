@@ -18,7 +18,8 @@ const App = () => {
 }
 
 function subscribe (fn) {
-  subscriptions.push(fn)
+  const foundFunc = subscriptions.find(f => f.name === fn.name)
+  !foundFunc && subscriptions.push(fn) 
 }
 
 function trigger (msg) {
