@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux'
 
-module.exports = combineReducers({})
+import { badUrl } from './bad-url'
+
+module.exports = combineReducers({
+  badUrl
+})
