@@ -10,6 +10,7 @@ import Home from './pages/home'
 import BadUrl from './pages/bad-url'
 
 const Routes = () => {
+
   return (
     h(Router, [
       h(Switch, [
@@ -24,6 +25,7 @@ const Routes = () => {
       ])
     ])
   )
+
 }
 
 module.exports = Routes

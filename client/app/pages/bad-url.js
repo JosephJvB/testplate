@@ -16,6 +16,7 @@ const BadUrl = props => {
 
   const {
     goBack,
+    // destructure inside destructure
     location: { pathname }
   } = history
 
@@ -37,6 +38,7 @@ const BadUrl = props => {
       `BAD URL: ${badUrl}`
     ])
   )
+
 }
 
 // destructure state & implicit return
