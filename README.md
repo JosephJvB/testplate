@@ -9,15 +9,18 @@
   - supplies dom element div w/ class 'app'
 }
 
+
   * JS {
     - path: /client/index.js
     - injects all app elements into html (reactDOM.render)
   }
 
+
    * JS {
        - path: /client/app/index.js
        - makes redux and fela providers available to app
       }
+
 
       * JS {
         - path: /client/app/routes.js
@@ -25,3 +28,5 @@
       }
 
 ## ]
+
+Im not great with markdowns :)
