@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 import { showBadUrl } from '../../store/actions/bad-url'
 
 // sends user back if they reach a bad url
+// TODO: connect to fela and use recompose's 'compose'
 
 const BadUrl = props => {
-  // logs bad path name request
 
   const {
     history,
@@ -21,10 +21,14 @@ const BadUrl = props => {
 
   const { log } = global.console
 
+  // write bad url to console
   badUrl && log('BAD_URL: ', badUrl)
+  
+  // send bad url to redux store
   dispatch(showBadUrl(pathname))
 
   return (
+    // todo: tidy this block.
     h(F, [
       h('h1', {
         className: 'button is-large is-danger',
@@ -35,11 +39,9 @@ const BadUrl = props => {
   )
 }
 
+// destructure state & implicit return
 const mapStateToProps = ({ badUrl }) => ({
   badUrl
 })
 
 module.exports = connect(mapStateToProps)(BadUrl)
-
-// shoes a number 4 or 5 beside the button.
-// caused by the setTimeout I think. dont know why
