@@ -1,10 +1,11 @@
 import h from 'react-hyperscript'
 import { Provider as reduxProvider } from 'react-redux'
-import { Provider as felaProvider } from 'react-fela'
+import { Provider as felaProvider, ThemeProvider as felaThemeProvider } from 'react-fela'
 import { createRenderer } from 'fela'
 
 import { store } from '../store'
 import Routes from './routes'
+import theme from './theme'
 
 const mountNode = document.getElementById('stylesheet')
 
@@ -17,7 +18,11 @@ const App = () => {
     h(reduxProvider, { store }, [
       // make fela styles available
       h(felaProvider, { renderer, mountNode }, [
-        h(Routes)
+        // makes theme avaliable
+        h(felaThemeProvider, { theme }, [
+          // renders routes
+          h(Routes)
+        ])
       ])
     ])
   )
