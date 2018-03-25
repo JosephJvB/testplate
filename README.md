@@ -30,3 +30,9 @@
 ## ]
 
 Im not great with markdowns :)
+
+---
+
+### TODO: //
+
+* find some cool fonts to add to theme

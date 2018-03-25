@@ -1,12 +1,12 @@
 import test from 'tape'
-import React from 'react'
 import { shallow } from 'enzyme'
+import h from 'react-hyperscript'
 
-import App from '../client/components/App'
+import Home from '../client/app/pages/home'
 
-test('<App />', t => {
-  const expected = 'React development has begun!'
-  const wrapper = shallow(<App />)
+test('h(Home)', (t) => {
+  const expected = 'I am that which I am'
+  const wrapper = shallow(h(Home))
   t.equal(wrapper.text(), expected)
   t.end()
 })

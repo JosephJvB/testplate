@@ -1,6 +1,7 @@
 module.exports = {
-    "extends": "standard",
+    "extends": "airbnb",
     "rules": {
-        "padded-blocks": [2, "always"], // enforce padding within blocks
+        "semi": [2, "never"],
+        "comma-dangle": [1, "never"]
     }
-};
+}
